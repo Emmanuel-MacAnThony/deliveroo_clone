@@ -22,7 +22,7 @@ const Restaurants = () => {
     >
       {restaurants?.map((restaurant, index) => {
         return (
-          <Link href={"/"} asChild key={index.toString()}>
+          <Link href={"/details"} asChild key={index.toString()}>
             <TouchableOpacity>
               <View style={styles.restaurantCard}>
                 <Image source={restaurant.img} style={styles.image} />
