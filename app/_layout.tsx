@@ -45,6 +45,29 @@ export default function RootLayoutNav() {
             },
           }}
         />
+        <Stack.Screen
+          name="(modal)/location-search"
+          options={{
+            presentation: "modal",
+            gestureEnabled: true,
+            headerTitle: "Select Location",
+            headerShadowVisible: false,
+            headerLeft: () => {
+              return (
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                  <Ionicons
+                    name="arrow-back"
+                    size={28}
+                    color={Colors.primary}
+                    style={{
+                      marginRight: 20,
+                    }}
+                  />
+                </TouchableOpacity>
+              );
+            },
+          }}
+        />
       </Stack>
     </BottomSheetModalProvider>
   );
